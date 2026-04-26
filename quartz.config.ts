@@ -1,6 +1,9 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
+// remote or local flag
+const isProd = process.env.VERCEL === "1"
+
 /**
  * Quartz 4 Configuration
  *
@@ -16,7 +19,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "notes.hirosl.com",
+    baseUrl: isProd ? "https://notes.hirosl.com" : "http://localhost:8080/",
     ignorePatterns: [
       "private",
       "templates",
