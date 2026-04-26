@@ -19,7 +19,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: isProd ? "https://notes.hirosl.com" : "http://localhost:8080/",
+    baseUrl: isProd ? "notes.hirosl.com" : "localhost:8080/",
     ignorePatterns: [
       "private",
       "templates",
